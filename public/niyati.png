@@ -1,0 +1,218 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1800" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="niyatiBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0A0A0A" />
+      <stop offset="60%" stop-color="#040404" />
+      <stop offset="100%" stop-color="#000000" />
+    </radialGradient>
+
+    <!-- Center Light Shaft -->
+    <linearGradient id="lightShaft" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95" />
+      <stop offset="35%" stop-color="#A8C4D6" stop-opacity="0.5" />
+      <stop offset="70%" stop-color="#4F7185" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#05080A" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Red Door Glow -->
+    <linearGradient id="redDoorGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF001E" stop-opacity="0.8" />
+      <stop offset="80%" stop-color="#800008" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- White Door Glow -->
+    <linearGradient id="whiteDoorGlow" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.6" />
+      <stop offset="80%" stop-color="#94A3B8" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Wet Floor Reflections -->
+    <linearGradient id="floorReflection" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.4" />
+      <stop offset="60%" stop-color="#FFFFFF" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </linearGradient>
+
+    <filter id="noiseFilter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.06 0" />
+    </filter>
+  </defs>
+
+  <!-- Deep Black Base -->
+  <rect width="1200" height="1800" fill="url(#niyatiBg)" />
+  <rect width="1200" height="1800" filter="url(#noiseFilter)" />
+
+  <!-- ================= TOP HEADER ================= -->
+  <g fill="#F4F1EA" font-family="'Plus Jakarta Sans', sans-serif" text-anchor="middle" letter-spacing="0.45em">
+    <text x="600" y="65" font-size="14" font-weight="600" opacity="0.85">A   F I L M   B Y</text>
+    <text x="600" y="95" font-size="22" font-weight="800" font-family="'Cinzel', serif" letter-spacing="0.32em">
+      ADARSH R MOHITHE
+    </text>
+  </g>
+
+  <!-- ================= MASSIVE PROFILE SILHOUETTE ================= -->
+  <g opacity="0.88">
+    <!-- Backlit hair, brow, nose, lips and collar contours of Adarsh looking down -->
+    <!-- Head and hair silhouette rim -->
+    <path d="M600,160 C750,155 870,220 930,320 C960,370 965,420 940,480 C915,540 850,580 830,620 C815,650 820,680 840,710 C860,740 850,780 820,830 C780,890 730,940 680,990 C620,1050 560,1100 500,1130 C450,1155 400,1165 350,1170 C300,1175 250,1180 200,1190 L180,1050 C230,1000 270,930 290,850 C310,770 300,700 270,640 C230,560 210,480 220,400 C235,280 320,190 440,160 Z"
+          fill="#060606" stroke="#1A1A1A" stroke-width="1.5" />
+
+    <!-- Rim Lighting on Hair and Face -->
+    <path d="M840,230 C900,280 940,350 935,420 C930,470 890,520 860,560 C845,580 830,610 835,640 C840,665 850,680 840,710 C830,740 800,780 770,820"
+          stroke="#475569" stroke-width="3" fill="none" opacity="0.6" stroke-linecap="round" />
+  </g>
+
+  <!-- ================= CENTER VERTICAL SHAFT OF LIGHT ================= -->
+  <g transform="translate(600, 0)">
+    <!-- Light Beam Column from ceiling to floor -->
+    <polygon points="-45,180 45,180 55,1200 -55,1200" fill="url(#lightShaft)" />
+
+    <!-- Man looking through doorway inside the light slice -->
+    <g transform="translate(0, 360)">
+      <ellipse cx="-5" cy="0" rx="35" ry="50" fill="#030303" />
+      <path d="M-25,15 Q0,35 25,15 Q0,5 -25,15" fill="#1A1A1A" opacity="0.5" />
+    </g>
+
+    <!-- Security Camera Dome at top of light shaft -->
+    <g transform="translate(0, 155)">
+      <!-- Mount bracket -->
+      <rect x="-18" y="-15" width="36" height="15" fill="#141414" stroke="#000" stroke-width="2" />
+      <!-- Dome casing -->
+      <ellipse cx="0" cy="8" rx="28" ry="18" fill="#080808" stroke="#222" stroke-width="2" />
+      <ellipse cx="0" cy="12" rx="20" ry="12" fill="#000000" />
+      <!-- Red Recording Status Indicator LED -->
+      <circle cx="-6" cy="13" r="3.5" fill="#FF001E" />
+      <circle cx="-6" cy="13" r="7" fill="#FF001E" opacity="0.4" />
+    </g>
+
+    <!-- Distant Doorway at Floor Level (Vanishing point) -->
+    <rect x="-35" y="850" width="70" height="170" fill="#E2E8F0" opacity="0.9" />
+
+    <!-- Walking Silhouetted Figure with Backpack -->
+    <g transform="translate(0, 1020)">
+      <!-- Head -->
+      <circle cx="0" cy="-60" r="10" fill="#000000" />
+      <!-- Torso & Backpack -->
+      <path d="M-10,-50 L10,-50 L12,-20 L-10,-20 Z" fill="#000000" />
+      <path d="M-14,-45 C-18,-40 -18,-25 -10,-22 Z" fill="#000000" />
+      <!-- Legs Walking -->
+      <line x1="-5" y1="-20" x2="-8" y2="10" stroke="#000" stroke-width="6" stroke-linecap="round" />
+      <line x1="5" y1="-20" x2="8" y2="12" stroke="#000" stroke-width="6" stroke-linecap="round" />
+    </g>
+
+    <!-- Floor Light Reflection Streaks -->
+    <polygon points="-75,1080 75,1080 120,1280 -120,1280" fill="url(#floorReflection)" />
+  </g>
+
+  <!-- ================= SIDE DOORS ================= -->
+  <!-- Left Door (Glowing Red with EXPOSE) -->
+  <g transform="translate(300, 950)">
+    <!-- Door frame -->
+    <rect x="0" y="0" width="75" height="180" fill="#000000" stroke="#262626" stroke-width="2" />
+    <!-- Glowing red interior slit -->
+    <rect x="5" y="5" width="65" height="170" fill="url(#redDoorGlow)" />
+    <!-- Inner red rim line -->
+    <line x1="70" y1="5" x2="70" y2="175" stroke="#FF001E" stroke-width="3" />
+    <!-- EXPOSE Label -->
+    <text x="-120" y="95" fill="#F4F1EA" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="700" letter-spacing="0.4em" opacity="0.9">
+      EXPOSE
+    </text>
+  </g>
+
+  <!-- Right Door (White Ambient with UNDERSTAND) -->
+  <g transform="translate(830, 950)">
+    <!-- Door frame -->
+    <rect x="0" y="0" width="70" height="180" fill="#000000" stroke="#262626" stroke-width="2" />
+    <!-- Cool white light slit -->
+    <rect x="5" y="5" width="60" height="170" fill="url(#whiteDoorGlow)" />
+    <!-- Door slightly ajar -->
+    <polygon points="5,5 25,12 25,170 5,175" fill="#111" stroke="#333" stroke-width="1" />
+    <!-- UNDERSTAND Label -->
+    <text x="140" y="95" fill="#F4F1EA" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="700" letter-spacing="0.4em" opacity="0.9">
+      UNDERSTAND
+    </text>
+  </g>
+
+  <!-- ================= LEFT QUOTE ================= -->
+  <g fill="#F4F1EA" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="700" letter-spacing="0.32em" opacity="0.85">
+    <text x="100" y="520">S O M E</text>
+    <text x="100" y="555">P E O P L E</text>
+    <text x="100" y="590">A R E   N O T</text>
+    <text x="100" y="625">W H O   T H E Y</text>
+    <text x="100" y="660" fill="#FF001E" font-weight="800">S E E M</text>
+  </g>
+
+  <!-- ================= BOTTOM TITLE CLUSTER ================= -->
+  <!-- Tagline: WAS IT EVER YOUR CHOICE? -->
+  <text x="600" y="1320" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="600" fill="#F4F1EA" letter-spacing="0.45em" opacity="0.9">
+    W A S   I T   E V E R   Y O U R   C H O I C E ?
+  </text>
+
+  <!-- Red targeting crosshair over the choice line -->
+  <line x1="600" y1="1300" x2="600" y2="1340" stroke="#FF001E" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Main Title: N I Y A T I -->
+  <g transform="translate(600, 1470)" text-anchor="middle" font-family="'Cinzel', serif" font-weight="900" font-size="135" letter-spacing="0.32em">
+    <!-- N I -->
+    <text x="-240" y="0" fill="#E2E8F0">N</text>
+    <text x="-120" y="0" fill="#E2E8F0">I</text>
+
+    <!-- Stylized Blood-Red 'Y' (The Crossroads) -->
+    <g transform="translate(0, 0)">
+      <!-- Main glowing red cross Y -->
+      <path d="M-45,-120 L0,-40 L45,-120 L25,-120 L0,-75 L-25,-120 Z" fill="#FF001E" />
+      <rect x="-10" y="-40" width="20" height="120" fill="#FF001E" />
+      <!-- Drips from base of Y -->
+      <path d="M-6,80 Q0,110 0,135 Q0,110 6,80 Z" fill="#FF001E" />
+      <circle cx="0" cy="148" r="3" fill="#FF001E" />
+    </g>
+
+    <!-- A T I -->
+    <text x="120" y="0" fill="#E2E8F0">A</text>
+    <text x="240" y="0" fill="#E2E8F0">T</text>
+    <text x="340" y="0" fill="#E2E8F0">I</text>
+  </g>
+
+  <!-- Horizontal distress cut line across title -->
+  <line x1="160" y1="1430" x2="1040" y2="1430" stroke="#000000" stroke-width="3" opacity="0.8" />
+
+  <!-- Subtitle: A PSYCHOLOGICAL THRILLER -->
+  <text x="600" y="1530" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="600" fill="#F4F1EA" letter-spacing="0.45em" opacity="0.85">
+    A   P S Y C H O L O G I C A L   T H R I L L E R
+  </text>
+
+  <!-- Logo: PSYCHO CREATIONS with Eye in O -->
+  <g transform="translate(600, 1610)" text-anchor="middle">
+    <text x="0" y="0" font-family="'Cinzel', 'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="800" fill="#F4F1EA" letter-spacing="0.4em">
+      P S Y C H O
+    </text>
+    <!-- Eye inside 'O' -->
+    <circle cx="98" cy="-8" r="9" stroke="#F4F1EA" stroke-width="2" fill="none" />
+    <circle cx="98" cy="-8" r="3.5" fill="#FF001E" />
+
+    <text x="0" y="26" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#F4F1EA" letter-spacing="0.5em" opacity="0.8">
+      C R E A T I O N S
+    </text>
+  </g>
+
+  <!-- Bottom Cast and Crew Credits -->
+  <g fill="#F4F1EA" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="600" letter-spacing="0.22em" opacity="0.8">
+    <text x="160" y="1710" text-anchor="middle">ASSISTANT DIRECTOR</text>
+    <text x="160" y="1730" text-anchor="middle" font-weight="800" font-size="13">NIKITH</text>
+
+    <line x1="260" y1="1705" x2="260" y2="1735" stroke="#333" stroke-width="1.5" />
+
+    <text x="360" y="1710" text-anchor="middle">PRODUCER</text>
+    <text x="360" y="1730" text-anchor="middle" font-weight="800" font-size="13">YASHWANTH</text>
+
+    <!-- Actors Line on the Right -->
+    <text x="860" y="1710" text-anchor="middle">ACTORS</text>
+    <text x="860" y="1730" text-anchor="middle" font-weight="700" font-size="11" letter-spacing="0.18em">
+      ROHAN  |  BHANU PRAKASH G  |  YASHWANTH  |  NIKITH  |  NISARGA
+    </text>
+  </g>
+</svg>

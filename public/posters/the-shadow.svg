@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1800" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="shadowBg" cx="50%" cy="45%" r="75%">
+      <stop offset="0%" stop-color="#C2000B" />
+      <stop offset="55%" stop-color="#910007" />
+      <stop offset="85%" stop-color="#540003" />
+      <stop offset="100%" stop-color="#240001" />
+    </radialGradient>
+
+    <!-- Arm Shadow Gradient -->
+    <linearGradient id="armGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3D0002" />
+      <stop offset="35%" stop-color="#140001" />
+      <stop offset="70%" stop-color="#080000" />
+      <stop offset="100%" stop-color="#000000" />
+    </linearGradient>
+
+    <!-- Blood Drips -->
+    <linearGradient id="bloodDrip" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3B0002" />
+      <stop offset="70%" stop-color="#1A0000" />
+      <stop offset="100%" stop-color="#0D0000" />
+    </linearGradient>
+
+    <filter id="noiseFilter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.07 0" />
+    </filter>
+
+    <filter id="grungeTitle">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="1800" fill="url(#shadowBg)" />
+
+  <!-- Vignette overlay -->
+  <rect width="1200" height="1800" fill="#000000" opacity="0.15" />
+
+  <!-- Subtle Film Grain -->
+  <rect width="1200" height="1800" filter="url(#noiseFilter)" />
+
+  <!-- ================= TOP LEFT CREDITS ================= -->
+  <g fill="#F4F1EA" font-family="'Plus Jakarta Sans', sans-serif" letter-spacing="0.32em">
+    <text x="70" y="85" font-size="16" font-weight="700">PSYCHO CREATIONS</text>
+    <text x="70" y="110" font-size="13" font-weight="500" letter-spacing="0.5em" opacity="0.85">P R E S E N T S</text>
+
+    <text x="110" y="330" font-size="14" font-weight="600" letter-spacing="0.4em" opacity="0.9">A FILM BY</text>
+    <text x="110" y="365" font-size="28" font-weight="800" font-family="'Cinzel', serif" letter-spacing="0.25em">NIKITH KUMAR M R</text>
+  </g>
+
+  <!-- ================= TOP RIGHT CREDITS ================= -->
+  <g fill="#F4F1EA" font-family="'Plus Jakarta Sans', sans-serif" text-anchor="end">
+    <text x="1130" y="355" font-size="14" font-weight="600" letter-spacing="0.35em" opacity="0.85">PRODUCED BY</text>
+    <text x="1130" y="390" font-size="24" font-weight="800" font-family="'Cinzel', serif" letter-spacing="0.22em">YASHWANTH Y S</text>
+
+    <g opacity="0.95" font-size="13" font-weight="600" letter-spacing="0.22em">
+      <text x="1130" y="455">CINEMATOGRAPHER / EDITOR /</text>
+      <text x="1130" y="480">FILM MAKER / AUDIO AND</text>
+      <text x="1130" y="505">SOUND ARTIST</text>
+    </g>
+    <text x="1130" y="540" font-size="24" font-weight="800" font-family="'Cinzel', serif" letter-spacing="0.22em">ADARSH R MOHITHE</text>
+  </g>
+
+  <!-- ================= LEFT SIDE TAGLINE ================= -->
+  <g fill="#F4F1EA" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" letter-spacing="0.45em" opacity="0.85">
+    <text x="175" y="650">S O M E</text>
+    <text x="175" y="695">H U N T S</text>
+    <text x="175" y="740">A R E</text>
+    <text x="175" y="785">N O T</text>
+    <text x="175" y="830">A B O U T</text>
+    <text x="175" y="875">P R E Y . . .</text>
+
+    <text x="175" y="965">B U T</text>
+    <text x="175" y="1010">A B O U T</text>
+    <text x="175" y="1055">T H E</text>
+    <text x="175" y="1100">D A R K .</text>
+  </g>
+
+  <!-- ================= RIGHT SIDE ACTORS ================= -->
+  <g fill="#F4F1EA" font-family="'Plus Jakarta Sans', sans-serif" text-anchor="end">
+    <text x="1130" y="780" font-size="15" font-weight="700" letter-spacing="0.35em" opacity="0.85">ACTORS</text>
+    <g font-size="18" font-weight="700" letter-spacing="0.25em" font-family="'Cinzel', serif">
+      <text x="1130" y="820">BHANU PRAKASH G</text>
+      <text x="1130" y="865">ROHAN</text>
+      <text x="1130" y="910">YASHWANTH</text>
+      <text x="1130" y="955">NIKITH</text>
+      <text x="1130" y="1000">NISARGA</text>
+      <text x="1130" y="1045">ADARSH</text>
+    </g>
+  </g>
+
+  <!-- ================= CENTRAL ELEMENT: BLEEDING ARM & HAND ================= -->
+  <g transform="translate(600, 0)">
+    <!-- Arm Body -->
+    <path d="M-85,0 C-70,120 -50,220 -30,320 C-10,380 -5,440 -12,490 C-30,550 -75,600 -110,670 C-130,715 -145,770 -130,830 C-115,885 -70,950 -35,1020 C-15,1060 -5,1110 5,1160 C15,1210 25,1260 28,1290 C32,1250 45,1170 58,1100 C75,1010 115,920 135,840 C155,760 145,690 120,630 C90,560 65,490 55,410 C45,320 60,180 85,0 Z"
+          fill="url(#armGrad)" />
+
+    <!-- Shading, Texture and Tendons -->
+    <path d="M-40,250 Q-15,350 -10,480 Q-5,600 -50,720 Q-90,830 -60,940 Q-30,1040 10,1150"
+          stroke="#4D0005" stroke-width="26" fill="none" opacity="0.65" stroke-linecap="round" />
+    <path d="M-15,300 Q10,420 15,580 Q20,700 45,820 Q70,930 40,1050"
+          stroke="#1F0001" stroke-width="32" fill="none" opacity="0.85" stroke-linecap="round" />
+
+    <!-- Dark Red and Black Beaded Bracelet -->
+    <g transform="translate(0, 440)">
+      <!-- Bracelet band curve -->
+      <path d="M-90,0 Q-10,60 90,0 Q-10,35 -90,0" fill="#0A0001" />
+      <!-- Beads -->
+      <circle cx="-85" cy="5" r="13" fill="#380003" stroke="#000" stroke-width="2"/>
+      <circle cx="-60" cy="18" r="14" fill="#6B0008" stroke="#000" stroke-width="2"/>
+      <circle cx="-32" cy="27" r="15" fill="#380003" stroke="#000" stroke-width="2"/>
+      <circle cx="-3" cy="30" r="15" fill="#8A000A" stroke="#000" stroke-width="2"/>
+      <circle cx="28" cy="26" r="15" fill="#380003" stroke="#000" stroke-width="2"/>
+      <circle cx="58" cy="17" r="14" fill="#6B0008" stroke="#000" stroke-width="2"/>
+      <circle cx="83" cy="4" r="13" fill="#380003" stroke="#000" stroke-width="2"/>
+
+      <!-- Second strand of bracelet -->
+      <circle cx="-75" cy="25" r="11" fill="#1C0001" stroke="#000" stroke-width="1.5"/>
+      <circle cx="-50" cy="38" r="12" fill="#520005" stroke="#000" stroke-width="1.5"/>
+      <circle cx="-20" cy="46" r="12" fill="#240001" stroke="#000" stroke-width="1.5"/>
+      <circle cx="10" cy="46" r="12" fill="#520005" stroke="#000" stroke-width="1.5"/>
+      <circle cx="40" cy="37" r="12" fill="#240001" stroke="#000" stroke-width="1.5"/>
+      <circle cx="68" cy="23" r="11" fill="#520005" stroke="#000" stroke-width="1.5"/>
+    </g>
+
+    <!-- Hand Details: Fingers reaching down -->
+    <!-- Thumb (left side) -->
+    <path d="M-115,770 C-145,800 -160,845 -150,890 C-140,935 -110,965 -90,970 C-105,920 -105,860 -95,810 Z" fill="#0C0001" />
+
+    <!-- Index Finger -->
+    <path d="M-75,930 C-70,980 -55,1040 -40,1100 C-30,1140 -20,1180 -18,1210 C-15,1180 -25,1120 -35,1060 C-45,1000 -55,950 -55,930 Z" fill="#0A0001" />
+
+    <!-- Middle Finger (Longest) with bloody fingernail -->
+    <path d="M-25,970 C-15,1040 0,1130 12,1210 C22,1260 28,1295 30,1300 C32,1295 32,1240 28,1180 C20,1110 5,1020 -5,970 Z" fill="#080001" />
+    <path d="M22,1270 C24,1285 27,1298 29,1300 C31,1298 31,1285 29,1270 Z" fill="#800007" />
+
+    <!-- Ring Finger -->
+    <path d="M25,950 C38,1020 55,1100 68,1170 C75,1210 78,1245 78,1250 C76,1240 70,1190 60,1130 C48,1060 35,990 28,950 Z" fill="#0A0001" />
+
+    <!-- Pinky Finger -->
+    <path d="M65,880 C85,940 105,1005 115,1060 C120,1090 122,1120 122,1125 C120,1115 112,1075 100,1025 C88,970 72,915 65,880 Z" fill="#080001" />
+
+    <!-- Thick Blood Rivulets and Dripping Drops -->
+    <g fill="url(#bloodDrip)">
+      <!-- Main Middle Finger Drip -->
+      <path d="M26,1295 Q29,1340 29,1380 Q29,1410 27,1430 Q31,1430 31,1380 Q31,1340 32,1295 Z" />
+      <circle cx="28.5" cy="1445" r="4.5" fill="#1C0002" />
+      <circle cx="28.5" cy="1475" r="3" fill="#1A0002" />
+
+      <!-- Index finger drip -->
+      <path d="M-19,1205 Q-20,1250 -20,1280 Q-21,1300 -19,1315 Q-17,1300 -17,1280 Q-17,1250 -16,1205 Z" />
+      <circle cx="-18" cy="1330" r="3.5" fill="#1C0002" />
+
+      <!-- Ring finger drip -->
+      <path d="M76,1245 Q78,1280 78,1310 Q77,1330 79,1345 Q81,1330 80,1310 Q80,1280 79,1245 Z" />
+      <circle cx="78.5" cy="1360" r="3" fill="#1C0002" />
+
+      <!-- Dripping along forearm -->
+      <path d="M-5,540 Q0,620 12,700 Q18,740 16,770 Q20,770 20,740 Q15,620 2,540 Z" />
+      <path d="M45,710 Q55,780 62,850 Q66,880 65,900 Q68,900 68,880 Q62,780 50,710 Z" />
+    </g>
+  </g>
+
+  <!-- ================= BOTTOM TITLE CLUSTER ================= -->
+  <!-- "THE" -->
+  <text x="600" y="1410" text-anchor="middle" font-family="'Cinzel', serif" font-size="34" font-weight="800" fill="#F4F1EA" letter-spacing="0.45em">
+    T H E
+  </text>
+
+  <!-- "SHADOW" - Distressed Monumental Stencil -->
+  <g filter="url(#grungeTitle)">
+    <text x="600" y="1570" text-anchor="middle" font-family="'Cinzel', 'Bebas Neue', serif" font-size="160" font-weight="900" fill="#0B0001" stroke="#240003" stroke-width="4" letter-spacing="0.12em">
+      SHADOW
+    </text>
+  </g>
+
+  <!-- Silhouette in the 'O' letter of SHADOW -->
+  <g transform="translate(738, 1495) scale(0.65)">
+    <!-- Archway cutout highlight -->
+    <path d="M-12,50 C-12,0 12,0 12,50 Z" fill="#800007" opacity="0.6"/>
+    <!-- Small human standing silhouette -->
+    <circle cx="0" cy="15" r="4.5" fill="#080000" />
+    <path d="M-5,22 L5,22 L7,55 L3,55 L2,38 L-2,38 L-3,55 L-7,55 Z" fill="#080000" />
+  </g>
+
+  <!-- Subtitle: HUNTING FROM THE DARK -->
+  <text x="600" y="1640" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="700" fill="#F4F1EA" letter-spacing="0.45em" opacity="0.95">
+    H U N T I N G   F R O M   T H E   D A R K
+  </text>
+
+  <!-- Bottom Production Credit -->
+  <g fill="#F4F1EA" font-family="'Plus Jakarta Sans', sans-serif" text-anchor="middle" opacity="0.85">
+    <text x="600" y="1710" font-size="13" font-weight="700" letter-spacing="0.35em">
+      A PSYCHO CREATIONS PRODUCTION
+    </text>
+    <!-- Scratch line under production -->
+    <path d="M470,1725 Q600,1728 730,1725" stroke="#F4F1EA" stroke-width="1.5" fill="none" opacity="0.6"/>
+  </g>
+</svg>

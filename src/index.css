@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Bebas Neue', 'Syne', sans-serif;
+  --font-serif: 'Cinzel', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-noir-950: #050505;
+  --color-noir-900: #0a0a0a;
+  --color-noir-850: #121212;
+  --color-noir-800: #171717;
+  --color-noir-700: #262626;
+  --color-red-cinema: #B40018;
+  --color-red-cinema-dark: #7A0010;
+  --color-cream-warm: #F4F1EA;
+  --color-cream-muted: #A3A199;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B40018;
+}
+
+/* Viewfinder Film Grid & Cinematic Accents */
+.viewfinder-corner {
+  position: relative;
+}
+
+.viewfinder-corner::before,
+.viewfinder-corner::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: rgba(244, 241, 234, 0.4);
+  pointer-events: none;
+}
+
+.viewfinder-tl::before {
+  top: 12px;
+  left: 12px;
+  border-top: 1.5px solid rgba(244, 241, 234, 0.45);
+  border-left: 1.5px solid rgba(244, 241, 234, 0.45);
+}
+
+.viewfinder-tr::before {
+  top: 12px;
+  right: 12px;
+  border-top: 1.5px solid rgba(244, 241, 234, 0.45);
+  border-right: 1.5px solid rgba(244, 241, 234, 0.45);
+}
+
+.viewfinder-bl::before {
+  bottom: 12px;
+  left: 12px;
+  border-bottom: 1.5px solid rgba(244, 241, 234, 0.45);
+  border-left: 1.5px solid rgba(244, 241, 234, 0.45);
+}
+
+.viewfinder-br::before {
+  bottom: 12px;
+  right: 12px;
+  border-bottom: 1.5px solid rgba(244, 241, 234, 0.45);
+  border-right: 1.5px solid rgba(244, 241, 234, 0.45);
+}
+
+/* Subtle Film Grain effect overlay */
+.film-grain {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Cinematic Red Backlight Glow */
+.cinema-glow {
+  box-shadow: 0 0 60px -15px rgba(180, 0, 24, 0.45);
+}
+
+.cinema-text-glow {
+  text-shadow: 0 0 24px rgba(180, 0, 24, 0.6);
+}
+
+/* Animated Project Photo Animations */
+@keyframes projectKenBurns {
+  0%, 100% {
+    transform: scale(1.02) translate(0%, 0%);
+  }
+  50% {
+    transform: scale(1.08) translate(-1%, -1%);
+  }
+}
+
+@keyframes laserScan {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes radarSweep {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes hudGlowPulse {
+  0%, 100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+.animate-project-kenburns {
+  animation: projectKenBurns 16s ease-in-out infinite;
+}
+
+.animate-laser-scan {
+  animation: laserScan 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-radar-sweep {
+  animation: radarSweep 6s linear infinite;
+}
+
+.animate-hud-pulse {
+  animation: hudGlowPulse 2.8s ease-in-out infinite;
+}
